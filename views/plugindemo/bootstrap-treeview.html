@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-treeview</title>
+	<!--bootstrap基础引用 start-->
+	<script type="text/javascript" src="../../public/bootstrap/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="../../public/bootstrap/bootstrap.min.css" >
+	<script type="text/javascript" src="../../public/bootstrap/bootstrap.min.js"></script>
+	<!--bootstrap基础引用 end-->
+	<!--bootstrap-treeview start-->
+	<link rel="stylesheet" type="text/css" href="../../public/plugins/bootstrap-treeview/bootstrap-treeview.min.css">
+	<script type="text/javascript" src="../../public/plugins/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+	<!--bootstrap-treeview end-->
+	<script type="text/javascript">
+		$(function(){
+			//1.渲染树
+			$('#tree').treeview({
+				data: getTree(),
+				showCheckbox:true//是否显示多选
+			});   
+			$("#btn").click(function(){
+				debugger;
+				var json= $('#tree').treeview('getNode', "5");
+				var data=JSON.stringify(json);
+				alert(data);
+			});
+			
+
+
+
+
+
+			//获取树数据
+			function getTree(){
+				var tree = [
+				{
+					text: "Parent 1",
+					id:"1",
+					nodes: [
+					{
+						text: "Child 1",
+						id:"2",
+						nodes: [
+						{
+							text: "Grandchild 1"
+						},
+						{
+							text: "Grandchild 2"
+						}
+						]
+					},
+					{
+						text: "Child 2"
+					}
+					]
+				},
+				{
+					text: "Parent 2"
+				},
+				{
+					text: "Parent 3"
+				},
+				{
+					text: "Parent 4"
+				},
+				{
+					text: "Parent 5"
+				}
+				];  
+				return tree;             
+			}
+		});
+
+	</script>
+</head>
+<body>
+<input id="btn" type="button" value="确定">
+	<div id="tree"></div>
+</body>
+</html>
