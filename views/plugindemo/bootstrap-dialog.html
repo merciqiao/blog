@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-dialog</title>
+	<!--bootstrap基础引用 start-->
+	<script type="text/javascript" src="../../public/bootstrap/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="../../public/bootstrap/bootstrap.min.css" >
+	<script type="text/javascript" src="../../public/bootstrap/bootstrap.min.js"></script>
+	<!--bootstrap基础引用 end-->
+	<!--bootstrap-treeview start-->
+	<link rel="stylesheet" type="text/css" href="../../public/plugins/bootstrap-dialog/bootstrap-dialog.min.css">
+	<script type="text/javascript" src="../../public/plugins/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+	<!--bootstrap-treeview end-->
+	<script type="text/javascript">
+		$(function(){
+			$("#btnBlue").click(function(){
+				BootstrapDialog.show({
+					title: '标题',
+					type: BootstrapDialog.TYPE_PRIMARY,
+					message: '提示语',
+					buttons: [{
+						label: '确定',
+						action: function(dialog) {
+							dialog.close();
+						}
+					}, {
+						label: '取消',
+						action: function(dialog) {
+							dialog.close();
+						}
+					}]
+				});
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h2>bootstrap-dialog使用教程</h2>
+		<hr>
+		<!--1.普通弹框 start-->
+		<h3>这是一个普通弹窗</h3>
+		<!-- <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div> -->
+		<figure class="highlight">
+			<pre>
+				<code class="language-js" data-lang="js">
+				BootstrapDialog.show({
+					title: '标题',
+					type: BootstrapDialog.TYPE_PRIMARY,
+					message: '提示语',
+					buttons: [{
+						label: '确定',
+						action: function(dialog) {
+							dialog.close();
+						}
+					}, {
+						label: '取消',
+						action: function(dialog) {
+							dialog.close();
+						}
+					}]
+				});
+
+				</code>
+			</pre>
+		</figure>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th style="width:10%">属性</th>
+					<th style="width:20%">可选值</th>
+					<th style="width:70%">描述</th>
+				</tr>
+			</thead>
+			<tbody>
+	<tr>
+		<td>title</td>
+		<td>-</td>
+		<td>标题</td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>弹窗样式、类型</td>
+		<td>
+		BootstrapDialog.TYPE_DEFAULT or 'type-default'：默认;
+		BootstrapDialog.TYPE_INFO or 'type-info':浅蓝;
+		BootstrapDialog.TYPE_PRIMARY or 'type-primary':蓝色;
+		BootstrapDialog.TYPE_SUCCESS or 'type-success':绿色;
+		BootstrapDialog.TYPE_WARNING or 'type-warning':桔色;
+		BootstrapDialog.TYPE_DANGER or 'type-danger':深红
+
+		</td>
+	</tr>
+	
+			</tbody>
+		</table>
+		<input id="btnBlue" type="button" class="btn btn-primary" value="蓝色标题弹窗"/>
+		<!--1.普通弹框 end-->
+	</div>
+	
+</body>
+</html>

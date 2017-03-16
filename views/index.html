@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="HTML,JS,web前端,bootstrap,mvvm,nodejs,express">
+	<meta name="author" content="qiaolixue,qiaolixue@yeah.net"> 
+
+	<script type="text/javascript" src="../public/bootstrap/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css" >
+	<script type="text/javascript" src="../public/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../public/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../public/plugins/bootstrap-select/bootstrap-select.min.css">
+
+	<title>一笑奈何</title>
+	<script type="text/javascript">
+	$(function(){
+		$("#search").click(function(){
+			window.open("http://bd.kuwo.cn/yinyue/9961545?from=baidu");
+		});
+	});
+	</script>
+</head>
+<body>
+<div id="main">
+	<!-- <ul>
+		{{each list}}
+	<li>编号:{{$value.id}}&nbsp;&nbsp;姓名:{{$value.name}}</li>
+		{{/each}}
+	</ul> -->
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">一笑奈何</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">PDF大全<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">web前端</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">bootstrap插件<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">bootstrap-select</a></li>
+            <li><a href="#">bootstrap-treeview</a></li>
+            <li><a href="#">bootstrap-table</a></li>
+            <li><a target="_blank" href="plugindemo/bootstrap-dialog.html">bootstrap-dialog</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">more...</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="关键词">
+        </div>
+        <button id="search" type="button" class="btn btn-default">搜索</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://blog.csdn.net/qq812858143" target="_blank">CSDN</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">官网集合<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://nodejs.cn/" target="_blank">nodejs</a></li>
+            <li><a href="http://www.bootcss.com/" target="_blank">bootstrap</a></li>
+            <li><a href="http://www.expressjs.com.cn/" target="_blank">express</a></li>
+            <li><a href="https://almsaeedstudio.com/" target="_blank">adminlte</a></li>
+            <li><a href="http://avalonjs.coding.me/" target="_blank">avalonjs</a></li>
+            <li><a href="http://cn.vuejs.org/" target="_blank">vuejs</a></li>
+            <li><a href="https://github.com/" target="_blank">github</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">more...</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+</body>
+</html>
