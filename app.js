@@ -10,6 +10,7 @@ var template = require('art-template');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var plugindemo=require('./routes/plugindemo');
+var vuedemo=require('./routes/vuedemo');
 
 var app = express();
 
@@ -28,10 +29,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/public',express.static(path.join(__dirname, 'public')));
+app.use('/static',express.static(path.join(__dirname, 'static')));
 
 app.use('/', index);
 app.use('/users', users);
 app.use('/plugindemo',plugindemo);
+app.use('/vuedemo',vuedemo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
