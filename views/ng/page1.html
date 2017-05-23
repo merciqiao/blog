@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>page1</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+	<script type="text/javascript">
+		$(function() {
+			$('#btn').click(function() {
+				alert('啊');
+			});
+		});
+	</script>
+</head>
+<body>
+<h1>这是page1页面</h1>
+<input id='btn' type="button" value="按钮" >
+<ul>
+		{{each list}}
+	<li>编号:{{$value.id}}&nbsp;&nbsp;姓名:{{$value.name}}</li>
+		{{/each}}
+	</ul> 
+
+	<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+  <p>使用 ng-repeat 来循环数组</p>
+  <ul>
+    <li ng-repeat="x in names">
+      {{ x }}
+    </li>
+  </ul>
+</div>
+</body>
+</html>
